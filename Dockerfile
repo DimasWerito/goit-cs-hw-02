@@ -1,5 +1,5 @@
 # Використовуємо базовий образ Python
-FROM python:3.9
+FROM python:3.12
 
 # Встановлюємо робочу директорію
 WORKDIR /app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Команда для запуску FastAPI застосунку
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "main.py"]
